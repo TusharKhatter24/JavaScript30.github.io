@@ -35,9 +35,13 @@ html {
 		color: white;
 		background: rgba(0,0,0,0.4);
 		text-shadow: 0 0 .5rem black;
+		a{
+			text-decoration: none;
+		}
 		kbd {
 			display: block;
 			font-size: 4rem;
+			color: white;
 		}
 		.sound {
 			font-size: 1.2rem;

@@ -32,9 +32,12 @@ html {
     color: white;
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 .5rem black; }
+    .keys .key a {
+      text-decoration: none; }
     .keys .key kbd {
       display: block;
-      font-size: 4rem; }
+      font-size: 4rem;
+      color: white; }
     .keys .key .sound {
       font-size: 1.2rem;
       text-transform: uppercase;
