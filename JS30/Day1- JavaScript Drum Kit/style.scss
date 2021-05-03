@@ -1,7 +1,5 @@
-html {
-	font-size: 10px;
-	background: url('./background.jpg') bottom center;
-	background-size: cover;
+*{
+	box-sizing: border-box;	
 }
 
 body,html {
@@ -10,13 +8,22 @@ body,html {
 	font-family: sans-serif;
 }
 
+html {
+	font-size: 10px;
+	background: url('./background.jpg') bottom center;
+	background-size: cover;
+}
+
 .keys {
 	display: flex;
-	flex: 1;
+	flex-wrap: wrap; 
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
 	.key {
+		display: block;
+		flex: 9%;
+		max-width: 11.11%;
 		border: .4rem solid black;
 		border-radius: .5rem;
 		margin: 1rem;
@@ -44,4 +51,16 @@ body,html {
 			border-color: #ffc600;
 			box-shadow: 0 0 1rem #ffc600;
 	}
+}
+@media screen and (max-width: 400px) {
+  .keys .key {
+    flex: 30%;
+	  max-width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .keys .key{
+    flex: 20%;
+	  max-width: 20%;
+  }
 }
