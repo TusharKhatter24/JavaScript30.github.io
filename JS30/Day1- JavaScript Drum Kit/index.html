@@ -9,39 +9,39 @@
 <body>
 	<div class="keys">
     <div data-key="65" class="key">
-      <a onClick="play()"><kbd>A</kbd>
+      <a onClick="play(65)"><kbd>A</kbd>
       <span class="sound">clap</span></a>
 	  </div>
 	<div data-key="83" class="key">
-      <a onClick="play()"><kbd>S</kbd>
+      <a onClick="play(83)"><kbd>S</kbd>
       <span class="sound">hihat</span></a>
     </div>
     <div data-key="68" class="key">
-      <a onClick="play()"><kbd>D</kbd>
+      <a onClick="play(68)"><kbd>D</kbd>
       <span class="sound">kick</span></a>
     </div>
     <div data-key="70" class="key">
-      <a onClick="play()"><kbd>F</kbd>
+      <a onClick="play(70)"><kbd>F</kbd>
       <span class="sound">openhat</span></a>
     </div>
     <div data-key="71" class="key">
-      <a onClick="play()"><kbd>G</kbd>
+      <a onClick="play(71)"><kbd>G</kbd>
       <span class="sound">boom</span></a>
     </div>
     <div data-key="72" class="key">
-      <a onClick="play()"><kbd>H</kbd>
+      <a onClick="play(72)"><kbd>H</kbd>
       <span class="sound">ride</span></a>
     </div>
     <div data-key="74" class="key">
-      <a onClick="play()"><kbd>J</kbd>
+      <a onClick="play(74)"><kbd>J</kbd>
       <span class="sound">snare</span></a>
     </div>
     <div data-key="75" class="key">
-      <a onClick="play()"><kbd>K</kbd>
+      <a onClick="play(75)"><kbd>K</kbd>
       <span class="sound">tom</span></a>
     </div>
     <div data-key="76" class="key">
-      <a onClick="play()"><kbd>L</kbd>
+      <a onClick="play(76)"><kbd>L</kbd>
 		  <span class="sound">tink</span></a>
     </div>
   </div>
@@ -57,9 +57,39 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 	<script>
-		function play(){
-			var myaudio = new Audio('sounds/hihat.wav');
-			myaudio.play();
+		function play(dk){
+			switch(dk){
+				case 63:
+					var audio=new Audio("sounds/clap.wav");
+				break;
+				case 83:
+					var audio=new Audio("sounds/hihat.wav");
+				break;
+				case 68:
+					var audio=new Audio("sounds/kick.wav");
+				break;
+				case 70:
+					var audio=new Audio("sounds/openhat.wav");
+				break;
+				case 71:
+					var audio=new Audio("sounds/boom.wav");
+				break;
+				case 72:
+					var audio=new Audio("sounds/ride.wav");
+				break;
+				case 74:
+					var audio=new Audio("sounds/snare.wav");
+				break;
+				case 75:
+					var audio=new Audio("sounds/tom.wav");
+				break;
+				case 76:
+					var audio=new Audio("sounds/tink.wav");
+				break;
+			}
+			audio.currentTime = 0; 
+			audio.play();
+			console.log(dk);
 		}
 		function playsound(e){
 			const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -78,6 +108,7 @@
 		const keys = document.querySelectorAll('.key');
 		keys.forEach(key => key.addEventListener('transitionend',removeTransition));
 		window.addEventListener('keydown',playsound);
+		window.addEventListener('click',playsound);
 	</script>
 
 </body>
