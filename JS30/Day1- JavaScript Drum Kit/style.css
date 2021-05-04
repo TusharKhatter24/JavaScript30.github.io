@@ -51,6 +51,9 @@ html {
     box-shadow: 0 0 1rem #ffc600; }
 
 @media screen and (max-width: 400px) {
+  .keys {
+     max-height: 90vh;
+  }
   .keys .key {
     flex: 30%;
     max-width: 30%; } }
