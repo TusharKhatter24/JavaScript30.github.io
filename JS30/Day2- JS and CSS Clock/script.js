@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JS + CSS Clock</title>
-	<link rel="stylesheet" href="style.css">
-<!--	<script src="script.js"></script>-->
-</head>
-<body>
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
-	</div>
-	<script>
-		  const secondHand = document.querySelector('.second-hand');
+  const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
 
@@ -38,8 +21,3 @@
   setInterval(setDate, 1000);
 
   setDate();
-
-	</script>
-
-</body>
-</html>
