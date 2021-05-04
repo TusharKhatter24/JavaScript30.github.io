@@ -60,12 +60,6 @@ html {
 	}
 }
 @media screen and (max-width: 400px) {
-	body{
-		max-height: 90vh;
-	}
-	.keys{
-		min-height: 90vh;
-	}
   .keys .key {
     flex: 30%;
 	  max-width: 30%;
