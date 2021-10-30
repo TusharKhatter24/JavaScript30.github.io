@@ -76,6 +76,8 @@
   function bonk(e) {
     if(!e.isTrusted) return; // cheater!
     score++;
+    var audio=new Audio('sound.mp3');
+    audio.play();
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
   }
